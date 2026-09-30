@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sarawak Tour</title>
+
+<link rel="stylesheet"
+href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+
+body {
+    font-family: Arial;
+}
+
+/* HOME */
+.hero {
+    background: linear-gradient(135deg,#00695c,#26a69a);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    margin: 15px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px #ccc;
+}
+
+/* SMALL RECTANGLE IMAGE */
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.price {
+    color: #e65100;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.success {
+    color: green;
+    display: none;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HOME ================= -->
+
+<div data-role="page" id="home">
+
+    <div data-role="header">
+
+        <h1>🌴 Sarawak Tour</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tour">Tours</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="hero">
+
+        <h2>Explore Sarawak</h2>
+
+        <p>
+            Discover beautiful places,
+            culture and adventure.
+        </p>
+
+        <a href="#tour"
+           class="ui-btn ui-btn-b"
+           data-transition="slide">
+            Explore Tours
+        </a>
+
+    </div>
+
+
+    <div data-role="content">
+
+        <h2>Welcome!</h2>
+
+        <p>
+            Book your unforgettable
+            Sarawak holiday with us.
+        </p>
+
+
+        <!-- SMALL RECTANGLE IMAGE -->
+
+        <div class="card">
+
+            <img src="sarawak tour2.webp"
+                 alt="Sarawak Tour">
+
+            <div class="card-content">
+
+                <h3>🌿 Beautiful Sarawak</h3>
+
+                <p>
+                    Enjoy nature, culture,
+                    food and exciting activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-role="footer">
+        <h4>© 2026 Sarawak Tour</h4>
+    </div>
+
+</div>
+
+
+
+<!-- ================= TOUR ================= -->
+
+<div data-role="page" id="tour">
+
+    <div data-role="header">
+
+        <a href="#home">Back</a>
+
+        <h1>Tour Packages</h1>
+
+    </div>
+
+
+    <div data-role="content">
+
+        <h2>Our Packages</h2>
+
+
+        <!-- BAKO -->
+
+        <div class="card">
+
+            <img src="Bako National Park.jpg"
+                 alt="Bako National Park">
+
+            <div class="card-content">
+
+                <h3>🌿 Bako National Park</h3>
+
+                <p>
+                    Jungle trekking,
+                    wildlife and beach.
+                </p>
+
+                <a href="#"
+                   title="Duration: 2 Days 1 Night">
+                    ℹ️ Duration
+                </a>
+
+                <button onclick="info('Bako')">
+                    More Info
+                </button>
+
+                <p class="price">
+                    RM350 / person
+                </p>
+
+                <a href="#booking"
+                   class="ui-btn ui-btn-b"
+                   data-transition="slide">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MULU -->
+
+        <div class="card">
+
+            <img src="Mulu Adventure.jpg"
+                 alt="Mulu Adventure">
+
+            <div class="card-content">
+
+                <h3>🏞️ Mulu Adventure</h3>
+
+                <p>
+                    Cave exploration,
+                    hiking and sightseeing.
+                </p>
+
+                <a href="#"
+                   title="Duration: 3 Days 2 Nights">
+                    ℹ️ Duration
+                </a>
+
+                <button onclick="info('Mulu')">
+                    More Info
+                </button>
+
+                <p class="price">
+                    RM650 / person
+                </p>
+
+                <a href="#booking"
+                   class="ui-btn ui-btn-b"
+                   data-transition="slide">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- KUCHING -->
+
+        <div class="card">
+
+            <img src="Kuching City Tour.jpg"
+                 alt="Kuching City">
+
+            <div class="card-content">
+
+                <h3>🏙️ Kuching City Tour</h3>
+
+                <p>
+                    Culture, food and
+                    city sightseeing.
+                </p>
+
+                <a href="#"
+                   title="Duration: 1 Day">
+                    ℹ️ Duration
+                </a>
+
+                <button onclick="info('Kuching')">
+                    More Info
+                </button>
+
+                <p class="price">
+                    RM180 / person
+                </p>
+
+                <a href="#booking"
+                   class="ui-btn ui-btn-b"
+                   data-transition="slide">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= BOOKING ================= -->
+
+<div data-role="page" id="booking">
+
+    <div data-role="header">
+
+        <a href="#tour">Back</a>
+
+        <h1>Booking</h1>
+
+    </div>
+
+
+    <div data-role="content">
+
+        <h2>Book Your Tour</h2>
+
+        <form id="bookingForm">
+
+            <label>Name:</label>
+            <input type="text"
+                   id="name"
+                   placeholder="Full Name">
+
+            <label>Phone:</label>
+            <input type="tel"
+                   id="phone"
+                   placeholder="0123456789">
+
+            <label>Email:</label>
+            <input type="email"
+                   id="email"
+                   placeholder="example@gmail.com">
+
+            <label>Travel Date:</label>
+            <input type="date"
+                   id="date">
+
+            <label>Participants:</label>
+            <input type="number"
+                   id="people"
+                   min="1">
+
+            <label>Tour Package:</label>
+
+            <select id="package">
+
+                <option value="">
+                    Select Package
+                </option>
+
+                <option>
+                    Bako National Park
+                </option>
+
+                <option>
+                    Mulu Adventure
+                </option>
+
+                <option>
+                    Kuching City Tour
+                </option>
+
+            </select>
+
+
+            <!-- ETHICAL CONSENT -->
+
+            <label>
+
+                <input type="checkbox"
+                       id="consent">
+
+                I agree to the privacy policy.
+
+            </label>
+
+
+            <p id="error"
+               class="error"></p>
+
+            <p id="success"
+               class="success"></p>
+
+
+            <button type="submit"
+                    class="ui-btn ui-btn-b">
+
+                Submit Booking
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<div data-role="page" id="contact">
+
+    <div data-role="header">
+
+        <a href="#home">Back</a>
+
+        <h1>Contact Us</h1>
+
+    </div>
+
+
+    <div data-role="content">
+
+        <h2>📩 Contact Us</h2>
+
+        <p>📍 Kuching, Sarawak</p>
+        <p>📞 012-3456789</p>
+        <p>📧 sarawaktour@gmail.com</p>
+
+
+        <a href="#contactModal"
+           data-rel="popup"
+           class="ui-btn ui-btn-b">
+
+            Contact Form
+
+        </a>
+
+
+        <div data-role="popup"
+             id="contactModal"
+             class="ui-content">
+
+            <h3>Send Message</h3>
+
+            <form id="contactForm">
+
+                <input type="text"
+                       id="cname"
+                       placeholder="Name">
+
+                <input type="email"
+                       id="cemail"
+                       placeholder="Email">
+
+                <textarea id="message"
+                          placeholder="Message">
+                </textarea>
+
+                <p id="cerror"
+                   class="error"></p>
+
+                <p id="csuccess"
+                   class="success"></p>
+
+                <button type="submit">
+                    Send
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function info(packageName) {
+
+    if (packageName == "Bako") {
+
+        alert(
+            "Bako National Park\n\n" +
+            "Jungle trekking & wildlife"
+        );
+
+    }
+
+    else if (packageName == "Mulu") {
+
+        alert(
+            "Mulu Adventure\n\n" +
+            "Cave exploration & hiking"
+        );
+
+    }
+
+    else {
+
+        alert(
+            "Kuching City Tour\n\n" +
+            "Food, culture & sightseeing"
+        );
+
+    }
+
+}
+
+
+/* BOOKING VALIDATION */
+
+$("#bookingForm").submit(function(e) {
+
+    e.preventDefault();
+
+    let name = $("#name").val();
+    let phone = $("#phone").val();
+    let email = $("#email").val();
+    let date = $("#date").val();
+    let people = $("#people").val();
+    let pack = $("#package").val();
+    let consent = $("#consent").is(":checked");
+
+    let error = "";
+
+    if (name == "")
+        error += "Enter your name.<br>";
+
+    if (phone == "")
+        error += "Enter phone number.<br>";
+
+    if (email == "")
+        error += "Enter email.<br>";
+
+    if (date == "")
+        error += "Select travel date.<br>";
+
+    if (people == "")
+        error += "Enter participants.<br>";
+
+    if (pack == "")
+        error += "Select tour package.<br>";
+
+    if (!consent)
+        error += "Please agree to privacy policy.<br>";
+
+
+    if (error != "") {
+
+        $("#error").html(error).show();
+        $("#success").hide();
+
+    } else {
+
+        $("#error").hide();
+
+        $("#success")
+        .html("✅ Booking successful!")
+        .show();
+
+    }
+
+});
+
+
+/* CONTACT VALIDATION */
+
+$("#contactForm").submit(function(e) {
+
+    e.preventDefault();
+
+    let name = $("#cname").val();
+    let email = $("#cemail").val();
+    let message = $("#message").val();
+
+    if (name == "" ||
+        email == "" ||
+        message == "") {
+
+        $("#cerror")
+        .html("Please complete all fields.")
+        .show();
+
+        $("#csuccess").hide();
+
+    } else {
+
+        $("#cerror").hide();
+
+        $("#csuccess")
+        .html("✅ Message sent!")
+        .show();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
